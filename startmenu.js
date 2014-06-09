@@ -1,9 +1,24 @@
 Silentcrest.startMenu = function () {
-    var options = ['Start', 'Credits', 'Github'];
+    var options = [{
+        text: 'Start',
+        callback: function () {
+            Silentcrest.update = Silentcrest.play();
+        }
+    }, {
+        text: 'Credits',
+        callback: function () {
+            console.log('RylandAlmanza');
+        }
+    }, {
+        text: 'Github',
+        callback: function () {
+            window.location = "https://github.com/RylandAlmanza/silentcrest";
+        }
+    }];
     var selection = 0;
 
     for (var i = 0; i < options.length; i++) {
-        Silentcrest.display.putString(2, i, options[i]);
+        Silentcrest.display.putString(2, i, options[i].text);
     };
 
     Silentcrest.display.set(0, selection, {
@@ -35,6 +50,9 @@ Silentcrest.startMenu = function () {
             Silentcrest.display.set(0, selection, {
                 character: '>'
             });
+        }
+        if (key === 'x') {
+            options[selection].callback();
         }
     };
 };

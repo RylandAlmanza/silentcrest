@@ -1,32 +1,32 @@
 Silentcrest.sprites = {
     nothing: {
         character: ' ',
-        foreground: BLACK,
-        background: BLACK
+        fg: BLACK,
+        bg: BLACK
     },
     player: {
         character: '@',
-        foreground: WHITE,
-        background: BLACK
+        fg: WHITE,
+        bg: BLACK
     },
     goblin: {
         character: 'g',
-        foreground: GREEN,
-        background: BLACK
+        fg: GREEN,
+        bg: BLACK
     },
     grass: {
         character: '.',
-        foreground: GREEN,
-        background: BLACK
+        fg: GREEN,
+        bg: BLACK
     },
     tree: {
-        character: 't',
-        foreground: GREEN,
-        background: BLACK
+        character: 'T',
+        fg: GREEN,
+        bg: BLACK
     },
     water: {
         character: '~',
-        forground: BLUE,
-        background: BLACK
+        fg: BLUE,
+        bg: BLACK
     }
 };
