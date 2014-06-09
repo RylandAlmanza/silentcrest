@@ -1,13 +1,13 @@
 window.onload = function () {
-    SilentCrest.display = GenCon({
+    Silentcrest.display = GenCon({
         defaultBg: BLACK,
         defaultFg: WHITE
     });
-    SilentCrest.display.addTo('displayplace');
+    Silentcrest.display.addTo('displayplace');
 
-    SilentCrest.update = SilentCrest.startMenu();
+    Silentcrest.update = Silentcrest.startMenu();
 
     window.onkeypress = function (e) {
-        SilentCrest.update(e);
+        Silentcrest.update(e);
     };
 };

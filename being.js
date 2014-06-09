@@ -1,7 +1,7 @@
-SilentCrest.being = function (spec) {
+Silentcrest.being = function (spec) {
     var that = thing(spec);
-    SilentCrest.movement(that);
-    SilentCrest.active(that);
+    Silentcrest.movement(that);
+    Silentcrest.active(that);
 
     return that;
 };

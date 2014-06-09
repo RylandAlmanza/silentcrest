@@ -1,4 +1,4 @@
-SilentCrest.sprites = {
+Silentcrest.sprites = {
     nothing: {
         character: ' ',
         foreground: BLACK,

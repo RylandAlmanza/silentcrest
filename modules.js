@@ -1,9 +1,9 @@
-SilentCrest.position = function (thing) {
+Silentcrest.position = function (thing) {
     thing.x = 0;
     thing.y = 0;
 };
 
-SilentCrest.movement = function (thing) {
+Silentcrest.movement = function (thing) {
     thing.moveBy = function (xDelta, yDelta) {
         this.x += xDelta;
         this.y += yDelta;
@@ -16,14 +16,14 @@ SilentCrest.movement = function (thing) {
     };
 };
 
-SilentCrest.appearance = function (thing) {
-    thing.sprite = SilentCrest.sprites.nothing;
+Silentcrest.appearance = function (thing) {
+    thing.sprite = Silentcrest.sprites.nothing;
     thing.setSprite = function (sprite) {
-        thing.sprite = SilentCrest.sprites[sprite];
+        thing.sprite = Silentcrest.sprites[sprite];
         return this;
     };
 };
 
-SilentCrest.active = function (thing) {
+Silentcrest.active = function (thing) {
     thing.update = function (data) {};
 };

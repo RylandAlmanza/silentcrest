@@ -1,5 +1,5 @@
-SilentCrest.components = {};
+Silentcrest.components = {};
 
-SilentCrest.give = function (thing, component) {
-    SilentCrest.components[component](thing);
+Silentcrest.give = function (thing, component) {
+    Silentcrest.components[component](thing);
 };
