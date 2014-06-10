@@ -7,7 +7,7 @@ Silentcrest.startMenu = function () {
     }, {
         text: 'Credits',
         callback: function () {
-            console.log('RylandAlmanza');
+            Silentcrest.update = Silentcrest.credits();
         }
     }, {
         text: 'Github',
@@ -16,6 +16,8 @@ Silentcrest.startMenu = function () {
         }
     }];
     var selection = 0;
+
+    Silentcrest.display.clear();
 
     for (var i = 0; i < options.length; i++) {
         Silentcrest.display.putString(2, i, options[i].text);

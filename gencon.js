@@ -284,5 +284,52 @@ var GenCon = function (spec) {
         };
     };
 
+    // The clear method blanks out the entire screen if no parameters are
+    // supplied. If parameter's are supplied, it expects them to be the
+    // following.
+    //
+    // startX:
+    //     The left-most horizontal coordinate of the area to clear
+    //
+    // startY:
+    //     The top-most vertical coordinate of the area to clear
+    //
+    // width:
+    //     The width of the area to clear
+    //
+    // height:
+    //     The height of the area to clear
+    //
+    // - Example -
+    //     var display = GenCon({});
+    //     display.clear();
+    //     display.clear(2, 2, 3, 4);
+
+    that.clear = function () {
+        var startX = 0,
+            startY = 0,
+            clearWidth = spec.width,
+            clearHeight = spec.height;
+    
+        if (arguments.length > 0) {
+            startX = arguments[0];
+            startY = arguments[1];
+            clearWidth = arguments[2];
+            clearHeight = arguments[3];
+        }
+
+        for (var j = startY; j < clearHeight; j++) {
+            for (var i = startX; i < clearWidth; i++) {
+                this.set(i, j, {
+                    character: ' ',
+                    fg: spec.defaultFg,
+                    bg: spec.defaultBg
+                });
+            }
+        }
+
+        return this;
+    };
+
     return that;
 };
